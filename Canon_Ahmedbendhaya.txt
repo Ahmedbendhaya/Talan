@@ -1,0 +1,17 @@
+Ncanon <- 24 ; 
+
+Cadence <- 12.5 ; 
+
+Survie <- 35 ; 
+
+Var  A,Ntir : réel ; 
+
+Debut 
+
+ A <- ((Survie *60)/ Cadence)* Ncanon ;  
+
+Ntir <- A div 1; 
+
+Afficher ( “ Sortie : Le nombre de tirs que vous pouvez supporter en 35 minutes est “ Ntir) 
+
+Fin  

@@ -1,0 +1,27 @@
+Var A, i, max : Réel 
+
+Début 
+
+Afficher (“ donner un nombre”); 
+
+Saisir (A); 
+
+Max = A; 
+
+Pour i= 1 à i= 19 faire 
+
+ Afficher (“donner un nombre”); 
+
+Saisir (A); 
+
+Si A > Max alors  
+
+Max = A; 
+
+Fin si  
+
+Fin pour  
+
+Afficher (“ le nombre maximal est “ Max); 
+
+Fin 

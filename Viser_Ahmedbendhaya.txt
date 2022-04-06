@@ -1,0 +1,25 @@
+Algorithme Viser
+
+Var a,b,i : entier ;
+
+Debut
+
+a <- alea (1..50);
+i <- 0 ;
+
+Tant que i<5 faire
+
+afficher ( "deviner la position");
+Saisir (b)
+Si a < b 
+afficher (" l'angle est plus petit")
+i<- i+1
+sinon si a > b 
+afficher (" l'angle est plus grand")
+i<- i+1
+sinon 
+afficher ("vous avez gagné")
+i<- 5
+Fin si
+Fin tant que
+Fin
