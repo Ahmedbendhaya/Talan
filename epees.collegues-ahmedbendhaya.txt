@@ -1,0 +1,31 @@
+Algorithme Epee
+
+T=["Alban", "Jim", "Bob", "Albatroz", "Jinto", "Bow", "Hijo", "Manu", "Seb", "Teilo", "Charles", "Xavier"];
+
+
+Fonction comparer(ref a,b : chaine,) : entier;
+Debut
+Var c,i : entier
+c=0;
+i=1;
+tant que i< long(a) et i < long(b) et c=0 faire 
+si a[i] < b[i] alors c=1;
+sinon si a[i] > b[i] alors c=2;
+sinon i=i+1; 
+fin tant que
+retourner(c); 
+fin comparer 
+
+Fonction Epee_tribulle (ref T : tableau[1..12] de chaines) :Vide;
+var i,j,cle :entier;
+  début
+Si 
+    pour i allant de 1 à 11 faire
+      pour j allant de 12 à i+1 par pas de -1 faire
+        si Comparer(T[j],T[j-1])=1 alors
+          echange(T, j, j-1);
+        finsi
+      finpour
+    finpour
+  fin
+fin Epee_tribulle

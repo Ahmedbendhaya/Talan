@@ -1,0 +1,52 @@
+Algorithme Palindrome
+
+Chaîne = tableau[1..100] de car;
+var résultat : booléen;
+    i,n : entier;
+     
+
+Début
+
+résultat = VRAI
+n = longueur(Chaîne);
+i = 1;
+tant que(i< n/2 ET résultat = VRAI) alors
+  Si (Chaîne[i] <> chaîne[n-i+1]) alors
+    résultat = FAUX;
+    i=i+1;
+  Fin Si
+Fin tant que
+Afficher(résultat); //si résultat = VRAI le mot est palindrome sinon le mot n'est pas palindrome    
+ 
+Fin
+
+
+--------------------------------------------------------------
+
+fonction Palindrome(ref Chaîne : tableau[1..100] de car): entier
+
+début
+
+var résultat : booléen;
+    i,n :entier
+
+résultat = VRAI
+n = longueur(Chaîne);
+i = 1;
+tant que(i< n/2 ET résultat = VRAI) alors
+  Si (Chaîne[i] <> chaîne[n-i+1]) alors
+    résultat = FAUX;
+    i=i+1;
+  Fin Si
+Fin tant que
+retourner(résultat); //si résultat = VRAI le mot est palindrome sinon le mot n'est pas palindrome    
+
+Fin fonction
+
+Fonction main() : void
+ début
+ Afficher("Donner le mot :");
+ Saisir(chaine);
+ Palindrome(chaine);
+ Fin Fonction
+

@@ -1,0 +1,65 @@
+Fonction Tri(ref T : tableau [1..8] de caractére) : tab ;  
+
+Var i,j : entier 
+
+Debut 
+
+Pour i=1 à i=7 faire 
+
+Pour j= 8 à i+1 faire  
+
+Si T[j]> T[j-1] alors  
+
+Echange (T,j,j-1); 
+
+Finsi  
+
+Finpour 
+
+Finpour 
+
+Fin 
+
+Fin fonction 
+
+ 
+
+Fonction recherche ( Ref t : tableau [1..n] de caractére, var v : chaine de caractére) : booleen 
+
+A=1 ; 
+
+B=n; 
+
+Trouve = faux; 
+
+Repeter  
+
+M = (a+b) div 2 ; 
+
+Si t[m]= t[v] alors trouve = vrai ; 
+
+ Sinon si t[m] < t[v] alors a= m+1 ;  
+
+Sinon b= m-1  
+
+Fin si  
+
+Jusqu’à (trouve = vrai) ou (a>b); 
+
+Fin  
+
+ 
+
+Variables nom etoile : chaine de caractére 
+
+Debut  
+
+Tab = tri(t); 
+
+Afficher (“saisir le nom de l’etoile “); 
+
+Saisir (nometoile); 
+
+Recherche (nometoile,tab), 
+
+Fin 
