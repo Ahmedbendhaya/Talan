@@ -1,0 +1,10 @@
+QCM1 / d
+QCM2 / c
+QCM3 / a
+QCM4 / b
+QCM5 / a
+QCM6 / d
+QCM7 / a
+QCM8 / d
+QCM8 (1) / c
+QCM8 (2) / d
