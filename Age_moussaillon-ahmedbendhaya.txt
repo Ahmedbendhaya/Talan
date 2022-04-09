@@ -4,12 +4,12 @@ T : tableau[1..8] d'entier;
  T=[45, 54, 23, 32, 64, 46, 28, 82];
 
 
-fonction minimumSoustableau(ref T :tableau[1..8] d'entiers, val Imin,Imax :entier) :entier;
+fonction maxSoustableau(ref T :tableau[1..8] d'entiers) :entier;
    var sauv :entier;
   début
-    sauv = Imin;
-    pour i allant de Imin+1 à Imax faire
-      si T[i]<T[sauv] alors
+    sauv = 1;
+    pour i allant de 1 à 8 faire
+      si T[i]>T[sauv] alors
         sauv = i;
       finsi
     finpour
@@ -21,8 +21,10 @@ fonction triSelection(ref T :tableau[1..8] d'entiers) :vide;
   var i,j,indice_cle :entier;
   début
     pour i allant de 1 à 7 faire
-      indice_cle = minimumSoustableau(T,i,8);
-      echange(T[i],T[indice_cle]);
+      indice_cle = maxSoustableau(T,i,8);
+    e = T[i];
+    T[i] = T[indice_cle];
+    T[indice_cle] = e;
     finpour
   fin
 finfonction
