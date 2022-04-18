@@ -1,0 +1,4 @@
+INSERT INTO ft_table (login , Date) SELECT nom , date_naissance FROM fiche_personne WHERE (`nom` LIKE '%a%' AND (LENGTH(nom) < 9)) ORDER BY nom ASC LIMIT 10 ;
+UPDATE `ft_table` SET `Groupe` = 'others'WHERE ID>5; 
+UPDATE `ft_table` SET Date = ADDDATE(Date, INTERVAL 20 YEAR) WHERE ID>5;
+DELETE FROM `ft_table` WHERE ID <6
