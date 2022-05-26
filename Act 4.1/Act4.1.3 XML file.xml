@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<Evenements>
+
+  <Evenement>
+    <titre>lancement d'un nouveau livre</titre>
+    <theme>culturel</theme>
+    <date>28-05-2022</date>
+    <lieu>cite de la culture</lieu>
+    <budget>1000 DNT</budget>
+    <activites>
+      <activite>
+         <titreact>seance de signature</titreact>
+         <dureeact>une heure</dureeact>
+      </activite>
+      <activite>
+         <titreact>debat</titreact>
+         <dureeact>deux heures</dureeact>
+       </activite>
+      <activite>
+         <titreact>conference de presse</titreact>
+         <dureeact>une heure</dureeact>
+      </activite>
+    </activites>
+    <participants>
+
+      <invites>
+       <invite>
+         <nominv>jihene saidene</nominv>
+         <IDinv>01</IDinv>
+         <NEinv>dar ennacher</NEinv>
+       </invite>
+       <invite>
+         <nominv>ghada ghram</nominv>
+         <IDinv>02</IDinv>
+         <NEinv>IFT</NEinv>
+       </invite>
+       <invite>
+         <nominv>Ayoub belhadj youssef</nominv>
+         <IDinv>03</IDinv>
+         <NEinv>la presse</NEinv>
+       </invite>
+      </invites>
+
+      <intervenants>
+        <intervenant>
+          <nomint>taher elfazaa</nomint>
+          <IDint>01</IDint>
+          <NEint>NA</NEint>
+          <langue>francais</langue>
+        </intervenant>
+        <intervenant>
+          <nomint>faten elfazaa</nomint>
+          <IDint>02</IDint>
+          <NEint>NA</NEint>
+          <langue>francais</langue>
+        </intervenant>
+      </intervenants>
+
+    </participants>
+  </Evenement>
+
+
+
+</Evenements>

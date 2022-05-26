@@ -1,0 +1,64 @@
+{
+   "Evenements": {
+      "Evenement": {
+         "titre": "lancement d'un nouveau livre",
+         "theme": "culturel",
+         "date": "28-05-2022",
+         "lieu": "cite de la culture",
+         "budget": "1000 DNT",
+         "activites": {
+            "activite": [
+               {
+                  "titreact": "seance de signature",
+                  "dureeact": "une heure"
+               },
+               {
+                  "titreact": "debat",
+                  "dureeact": "deux heures"
+               },
+               {
+                  "titreact": "conference de presse",
+                  "dureeact": "une heure"
+               }
+            ]
+         },
+         "participants": {
+            "invites": {
+               "invite": [
+                  {
+                     "nominv": "jihene saidene",
+                     "IDinv": "01",
+                     "NEinv": "dar ennacher"
+                  },
+                  {
+                     "nominv": "ghada ghram",
+                     "IDinv": "02",
+                     "NEinv": "IFT"
+                  },
+                  {
+                     "nominv": "Ayoub belhadj youssef",
+                     "IDinv": "03",
+                     "NEinv": "la presse"
+                  }
+               ]
+            },
+            "intervenants": {
+               "intervenant": [
+                  {
+                     "nomint": "taher elfazaa",
+                     "IDint": "01",
+                     "NEint": "NA",
+                     "langue": "francais"
+                  },
+                  {
+                     "nomint": "faten elfazaa",
+                     "IDint": "02",
+                     "NEint": "NA",
+                     "langue": "francais"
+                  }
+               ]
+            }
+         }
+      }
+   }
+}
