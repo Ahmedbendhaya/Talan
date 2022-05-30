@@ -1,0 +1,201 @@
+{
+	"id": "9031e5b3-876f-4d98-bb1b-0da1a94e4e9c",
+	"name": "New Collection",
+	"timestamp": "2022-05-30T15:59:07.217Z",
+	"collection_id": "21188748-d9e63732-b8cf-4d54-a5bd-01245991a3fd",
+	"folder_id": "21188748-b8b3a1f0-aa90-4abe-a4a8-a0de7d88dd71",
+	"environment_id": "0",
+	"totalPass": 18,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "b908110e-0e8a-4c37-a678-8b9b460ffe69",
+			"name": "City name",
+			"url": "https://api.openweathermap.org/data/2.5/weather?q=Tunisia&appid=fa3f43f9425a1eddda62ee219cc43b41",
+			"time": 135,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"JSON response": true,
+				"Body matches id": true,
+				"Body matches country": true,
+				"test id for city name": true,
+				"test country for city name": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"JSON response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches id": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches country": {
+					"pass": 1,
+					"fail": 0
+				},
+				"test id for city name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"test country for city name": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				135
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"JSON response": true,
+					"Body matches id": true,
+					"Body matches country": true,
+					"test id for city name": true,
+					"test country for city name": true
+				}
+			]
+		},
+		{
+			"id": "5e446c5a-cd72-4e76-950b-ee2e76f7fc0d",
+			"name": "Geo",
+			"url": "https://api.openweathermap.org/data/2.5/weather?lat=34&lon=9&appid=fa3f43f9425a1eddda62ee219cc43b41",
+			"time": 48,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"JSON response": true,
+				"Body matches id": true,
+				"Body matches country": true,
+				"id for geo": true,
+				"country for geo": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"JSON response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches id": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches country": {
+					"pass": 1,
+					"fail": 0
+				},
+				"id for geo": {
+					"pass": 1,
+					"fail": 0
+				},
+				"country for geo": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				48
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"JSON response": true,
+					"Body matches id": true,
+					"Body matches country": true,
+					"id for geo": true,
+					"country for geo": true
+				}
+			]
+		},
+		{
+			"id": "de9dc336-f8bc-4722-a89a-f7620f4f508d",
+			"name": "Prevision",
+			"url": "http://api.openweathermap.org/data/2.5/forecast?lat=34&lon=9&appid=fa3f43f9425a1eddda62ee219cc43b41",
+			"time": 308,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"JSON response": true,
+				"Body matches id": true,
+				"Body matches country": true,
+				"id for prevision": true,
+				"country for prevision": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"JSON response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches id": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches country": {
+					"pass": 1,
+					"fail": 0
+				},
+				"id for prevision": {
+					"pass": 1,
+					"fail": 0
+				},
+				"country for prevision": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				308
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"JSON response": true,
+					"Body matches id": true,
+					"Body matches country": true,
+					"id for prevision": true,
+					"country for prevision": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 491,
+	"collection": {
+		"requests": [
+			{
+				"id": "b908110e-0e8a-4c37-a678-8b9b460ffe69",
+				"method": "GET"
+			},
+			{
+				"id": "5e446c5a-cd72-4e76-950b-ee2e76f7fc0d",
+				"method": "GET"
+			},
+			{
+				"id": "de9dc336-f8bc-4722-a89a-f7620f4f508d",
+				"method": "GET"
+			}
+		]
+	}
+}

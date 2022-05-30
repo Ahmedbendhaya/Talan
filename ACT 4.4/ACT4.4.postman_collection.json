@@ -1,0 +1,417 @@
+{
+	"info": {
+		"_postman_id": "d9e63732-b8cf-4d54-a5bd-01245991a3fd",
+		"name": "ACT4.4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21188748"
+	},
+	"item": [
+		{
+			"name": "GET",
+			"item": [
+				{
+					"name": "City name",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"test id for city name\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.sys.id).to.eql(1197);\r",
+									"});\r",
+									"pm.test(\"test country for city name\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.sys.country).to.eql(\"TN\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.openweathermap.org/data/2.5/weather?q=Tunisia&appid=fa3f43f9425a1eddda62ee219cc43b41",
+							"protocol": "https",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"weather"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "Tunisia"
+								},
+								{
+									"key": "appid",
+									"value": "fa3f43f9425a1eddda62ee219cc43b41"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Geo",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"id for geo\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.sys.id).to.eql(1197);\r",
+									"});\r",
+									"pm.test(\"country for geo\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.sys.country).to.eql(\"TN\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.openweathermap.org/data/2.5/weather?lat=34&lon=9&appid=fa3f43f9425a1eddda62ee219cc43b41",
+							"protocol": "https",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"weather"
+							],
+							"query": [
+								{
+									"key": "lat",
+									"value": "34"
+								},
+								{
+									"key": "lon",
+									"value": "9"
+								},
+								{
+									"key": "appid",
+									"value": "fa3f43f9425a1eddda62ee219cc43b41"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Prevision",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"id for prevision\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.city.id).to.eql(2464461);\r",
+									"});\r",
+									"pm.test(\"country for prevision\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.city.country).to.eql(\"TN\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "api.openweathermap.org/data/2.5/forecast?lat=34&lon=9&appid=fa3f43f9425a1eddda62ee219cc43b41",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "lat",
+									"value": "34"
+								},
+								{
+									"key": "lon",
+									"value": "9"
+								},
+								{
+									"key": "appid",
+									"value": "fa3f43f9425a1eddda62ee219cc43b41"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"JSON response\", function () {",
+							"    var jsonData = pm.response.json();",
+							"});",
+							"pm.test(\"Body matches id\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"id\");",
+							"});",
+							"pm.test(\"Body matches country\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"country\");",
+							"});"
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "POST STATION",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"external_id\": \"SF_TEST003\",\r\n  \"name\": \"Charguia2\",\r\n  \"latitude\": 34.6,\r\n  \"longitude\": 9.1,\r\n  \"altitude\": 111\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://api.openweathermap.org/data/3.0/stations?appid=fa3f43f9425a1eddda62ee219cc43b41",
+					"protocol": "http",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"3.0",
+						"stations"
+					],
+					"query": [
+						{
+							"key": "appid",
+							"value": "fa3f43f9425a1eddda62ee219cc43b41"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post measurement",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"station_id\": \"583436dd9643a9000196b8d6\",\r\n    \"dt\": 1479817340,\r\n    \"temperature\": 18.7,\r\n    \"wind_speed\": 1.2,\r\n    \"wind_gust\": 3.4,\r\n    \"pressure\": 1021,\r\n    \"humidity\": 87,\r\n    \"rain_1h\": 2,\r\n    \"clouds\": [\r\n      {\r\n          \"condition\": \"NSC\"\r\n      }\r\n    ]\r\n  }\r\n]\r\n                    ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://api.openweathermap.org/data/3.0/measurements?appid=fa3f43f9425a1eddda62ee219cc43b41",
+					"protocol": "http",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"3.0",
+						"measurements"
+					],
+					"query": [
+						{
+							"key": "appid",
+							"value": "fa3f43f9425a1eddda62ee219cc43b41"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT STATION",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"external_id\": \"SF_TEST003\",\r\n  \"name\": \"Charguia\",\r\n  \"latitude\": 34.9,\r\n  \"longitude\": 9.6,\r\n  \"altitude\": 115\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://api.openweathermap.org/data/3.0/stations/6294c79e8885c200018f5f77?appid=fa3f43f9425a1eddda62ee219cc43b41",
+					"protocol": "http",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"3.0",
+						"stations",
+						"6294c79e8885c200018f5f77"
+					],
+					"query": [
+						{
+							"key": "appid",
+							"value": "fa3f43f9425a1eddda62ee219cc43b41"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT MEASUREMENT",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"station_id\": \"6294c79e8885c200018f5f77\",\r\n    \"dt\": 1479817340,\r\n    \"temperature\": 19.7,\r\n    \"wind_speed\": 1.3,\r\n    \"wind_gust\": 3.45,\r\n    \"pressure\": 1031,\r\n    \"humidity\": 90,\r\n    \"rain_1h\": 25\r\n  }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://api.openweathermap.org/data/3.0/measurements/583436dd9643a9000196b8d6?appid=fa3f43f9425a1eddda62ee219cc43b41",
+					"protocol": "http",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"3.0",
+						"measurements",
+						"583436dd9643a9000196b8d6"
+					],
+					"query": [
+						{
+							"key": "appid",
+							"value": "fa3f43f9425a1eddda62ee219cc43b41"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Station",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://api.openweathermap.org/data/3.0/stations/6294c79e8885c200018f5f77?appid=fa3f43f9425a1eddda62ee219cc43b41",
+					"protocol": "http",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"3.0",
+						"stations",
+						"6294c79e8885c200018f5f77"
+					],
+					"query": [
+						{
+							"key": "appid",
+							"value": "fa3f43f9425a1eddda62ee219cc43b41"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete measurement",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://api.openweathermap.org/data/3.0/measurements/583436dd9643a9000196b8d6?appid=fa3f43f9425a1eddda62ee219cc43b41",
+					"protocol": "http",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"3.0",
+						"measurements",
+						"583436dd9643a9000196b8d6"
+					],
+					"query": [
+						{
+							"key": "appid",
+							"value": "fa3f43f9425a1eddda62ee219cc43b41"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
